@@ -23,7 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/entries/create', 'EntryController@create')->name('entries.create');
 Route::post('/entries', 'EntryController@store')->name('entries.store');
 
-Route::get('/entries/{entry}', 'GuestController@show')->name('entries.show');
+Route::get('/entries/{entryBySlug}', 'GuestController@show')->name('entries.show');
 
 Route::get('/entries/{entry}/edit', 'EntryController@edit')->name('entries.edit');
 Route::patch('/entries/{entry}', 'EntryController@update')->name('entries.update');

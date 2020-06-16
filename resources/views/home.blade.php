@@ -11,7 +11,7 @@
                    <p>Mis Entradas</p>
                    <ul>
                         @foreach ($entries as $entry)
-                        <li><a href="{{route('entries.show',$entry->id)}}">{{$entry->titulo}}</a></li>
+                        <li><a href="{{$entry->getUrl()}}">{{$entry->titulo}}</a></li>
                         @endforeach  
                    </ul>
 
