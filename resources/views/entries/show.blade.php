@@ -15,7 +15,12 @@
                     <hr>
                     <a href="{{route('entries.edit',$entry->id)}}" class="btn btn-primary">Editar</a> 
                 @endcan
-                
+                <div class="card-footer">
+                    Autor: 
+                    <a href="{{route('user.show',$entry->user->username)}}">
+                        {{$entry->user->name}}
+                    </a>
+                </div>
                 
             </div>
         </div>

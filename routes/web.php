@@ -31,7 +31,7 @@ Route::patch('/entries/{entry}', 'EntryController@update')->name('entries.update
 
 
 //user
-Route::get('/users/{user}', 'UserController@show')->name('user.show');
+Route::get('/@{user}', 'UserController@show')->name('user.show');
 
 
 
