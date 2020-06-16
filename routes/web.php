@@ -13,10 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/','GuestController@index')->name('guest.index');;
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//entradas
+Route::get('/entries/create', 'EntryController@create')->name('entries.create');
+Route::post('/entries', 'EntryController@store')->name('entries.store');
+
+Route::get('/entries/{entry}', 'GuestController@show')->name('entries.show');
+
+Route::get('/entries/{entry}/edit', 'EntryController@edit')->name('entries.edit');
+Route::patch('/entries/{entry}', 'EntryController@update')->name('entries.update');
+
+
+
+//user
+Route::get('/users/{user}', 'UserController@show')->name('user.show');
+
+
+
